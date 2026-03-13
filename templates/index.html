@@ -7,13 +7,13 @@
     <title>Heart Disease Analysis | Premium Health Insights</title>
     <meta name="description"
         content="Advanced data analysis and visualization for heart disease patterns and risk factors.">
-    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 
 <body>
     <header class="site-header">
         <div class="container header-row">
-            <a href="/" class="brand">
+            <a href="{{ url_for('home') }}" class="brand">
                 <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M12 21.35C11.6333 21.35 11.2667 21.2167 10.9833 20.9333L3.06667 13.0167C1.41667 11.3667 1.41667 8.68333 3.06667 7.03333C4.71667 5.38333 7.4 5.38333 9.05 7.03333L12 9.98333L14.95 7.03333C16.6 5.38333 19.2833 5.38333 20.9333 7.03333C22.5833 8.68333 22.5833 11.3667 20.9333 13.0167L13.0167 20.9333C12.7333 21.2167 12.3667 21.35 12 21.35Z"
@@ -23,12 +23,12 @@
             </a>
 
             <nav class="main-nav">
-                <a href="/" class="nav-link active">Home</a>
+                <a href="{{ url_for('home') }}" class="nav-link active">Home</a>
                 <a href="#about" class="nav-link">About</a>
-                <a href="/dashboard" class="nav-link">Dashboard</a>
-                <a href="/story" class="nav-link">Story</a>
+                <a href="{{ url_for('dashboard') }}" class="nav-link">Dashboard</a>
+                <a href="{{ url_for('story') }}" class="nav-link">Story</a>
                 <a href="#" class="nav-link">Contact</a>
-                <a href="/dashboard" class="btn btn-nav">Get Started</a>
+                <a href="{{ url_for('dashboard') }}" class="btn btn-nav">Get Started</a>
             </nav>
         </div>
     </header>
@@ -41,7 +41,7 @@
                 <p>Interactive dashboards and a guided story to explore key drivers of heart disease risk. Clean,
                     simple, and responsive visualisations designed for deep medical insights.</p>
                 <div class="hero-cta">
-                    <a href="/dashboard" class="btn btn-primary">Get Started &rarr;</a>
+                    <a href="{{ url_for('dashboard') }}" class="btn btn-primary">Get Started &rarr;</a>
                 </div>
             </div>
             <div class="hero-image">
